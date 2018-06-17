@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4130F47-1EB1-4B46-9A56-702CF53736BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WangJun.DesktopApp</RootNamespace>
+    <AssemblyName>WangJun.DesktopApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp">
+      <HintPath>DLL\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core">
+      <HintPath>DLL\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms">
+      <HintPath>DLL\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DLL\cef.pak" />
+    <None Include="DLL\cef_100_percent.pak" />
+    <None Include="DLL\cef_200_percent.pak" />
+    <None Include="DLL\cef_extensions.pak" />
+    <None Include="DLL\devtools_resources.pak" />
+    <None Include="DLL\icudtl.dat" />
+    <None Include="DLL\locales\am.pak" />
+    <None Include="DLL\locales\ar.pak" />
+    <None Include="DLL\locales\bg.pak" />
+    <None Include="DLL\locales\bn.pak" />
+    <None Include="DLL\locales\ca.pak" />
+    <None Include="DLL\locales\cs.pak" />
+    <None Include="DLL\locales\da.pak" />
+    <None Include="DLL\locales\de.pak" />
+    <None Include="DLL\locales\el.pak" />
+    <None Include="DLL\locales\en-GB.pak" />
+    <None Include="DLL\locales\en-US.pak" />
+    <None Include="DLL\locales\es-419.pak" />
+    <None Include="DLL\locales\es.pak" />
+    <None Include="DLL\locales\et.pak" />
+    <None Include="DLL\locales\fa.pak" />
+    <None Include="DLL\locales\fi.pak" />
+    <None Include="DLL\locales\fil.pak" />
+    <None Include="DLL\locales\fr.pak" />
+    <None Include="DLL\locales\gu.pak" />
+    <None Include="DLL\locales\he.pak" />
+    <None Include="DLL\locales\hi.pak" />
+    <None Include="DLL\locales\hr.pak" />
+    <None Include="DLL\locales\hu.pak" />
+    <None Include="DLL\locales\id.pak" />
+    <None Include="DLL\locales\it.pak" />
+    <None Include="DLL\locales\ja.pak" />
+    <None Include="DLL\locales\kn.pak" />
+    <None Include="DLL\locales\ko.pak" />
+    <None Include="DLL\locales\lt.pak" />
+    <None Include="DLL\locales\lv.pak" />
+    <None Include="DLL\locales\ml.pak" />
+    <None Include="DLL\locales\mr.pak" />
+    <None Include="DLL\locales\ms.pak" />
+    <None Include="DLL\locales\nb.pak" />
+    <None Include="DLL\locales\nl.pak" />
+    <None Include="DLL\locales\pl.pak" />
+    <None Include="DLL\locales\pt-BR.pak" />
+    <None Include="DLL\locales\pt-PT.pak" />
+    <None Include="DLL\locales\ro.pak" />
+    <None Include="DLL\locales\ru.pak" />
+    <None Include="DLL\locales\sk.pak" />
+    <None Include="DLL\locales\sl.pak" />
+    <None Include="DLL\locales\sr.pak" />
+    <None Include="DLL\locales\sv.pak" />
+    <None Include="DLL\locales\sw.pak" />
+    <None Include="DLL\locales\ta.pak" />
+    <None Include="DLL\locales\te.pak" />
+    <None Include="DLL\locales\th.pak" />
+    <None Include="DLL\locales\tr.pak" />
+    <None Include="DLL\locales\uk.pak" />
+    <None Include="DLL\locales\vi.pak" />
+    <None Include="DLL\locales\zh-CN.pak" />
+    <None Include="DLL\locales\zh-TW.pak" />
+    <None Include="DLL\natives_blob.bin" />
+    <None Include="DLL\snapshot_blob.bin" />
+    <None Include="DLL\v8_context_snapshot.bin" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DLL\CefSharp.BrowserSubprocess.Core.dll" />
+    <Content Include="DLL\CefSharp.BrowserSubprocess.Core.pdb" />
+    <Content Include="DLL\CefSharp.BrowserSubprocess.exe" />
+    <Content Include="DLL\CefSharp.BrowserSubprocess.pdb" />
+    <Content Include="DLL\CefSharp.Core.dll" />
+    <Content Include="DLL\CefSharp.Core.pdb" />
+    <Content Include="DLL\CefSharp.Core.xml" />
+    <Content Include="DLL\CefSharp.dll" />
+    <Content Include="DLL\CefSharp.pdb" />
+    <Content Include="DLL\CefSharp.WinForms.dll" />
+    <Content Include="DLL\CefSharp.WinForms.pdb" />
+    <Content Include="DLL\CefSharp.WinForms.XML" />
+    <Content Include="DLL\CefSharp.XML" />
+    <Content Include="DLL\chrome_elf.dll" />
+    <Content Include="DLL\d3dcompiler_47.dll" />
+    <Content Include="DLL\libcef.dll" />
+    <Content Include="DLL\libEGL.dll" />
+    <Content Include="DLL\libGLESv2.dll" />
+    <Content Include="DLL\swiftshader\libEGL.dll" />
+    <Content Include="DLL\swiftshader\libGLESv2.dll" />
+    <Content Include="DLL\widevinecdmadapter.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.targets')" />
+</Project>
