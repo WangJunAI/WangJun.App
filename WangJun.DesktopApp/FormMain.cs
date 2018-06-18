@@ -25,7 +25,7 @@ namespace WangJun.DesktopApp
         public void InitBrowser()
         {
 
-            browser = new ChromiumWebBrowser("www.baidu.com");
+            browser = new ChromiumWebBrowser("http://localhost:14000/UI/Login/Login.html");
             this.Controls.Add(browser);
             browser.Dock = DockStyle.Fill;
         }
