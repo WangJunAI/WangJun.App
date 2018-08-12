@@ -24,10 +24,25 @@ namespace WangJun.DesktopApp
 
         public void InitBrowser()
         {
+            ///browser = new ChromiumWebBrowser("http://localhost:14000/UI/Login/Login.html");
+            browser = new ChromiumWebBrowser("http://www.baidu.com");
 
-            browser = new ChromiumWebBrowser("http://localhost:14000/UI/Login/Login.html");
             this.Controls.Add(browser);
             browser.Dock = DockStyle.Fill;
+            //browser.AddressChanged += Browser_AddressChanged;
+            browser.Click += Browser_Click;
+
+
+        }
+
+        private void Browser_Click(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void Browser_AddressChanged(object sender, AddressChangedEventArgs e)
+        {
+           // throw new NotImplementedException();
         }
     }
 }
